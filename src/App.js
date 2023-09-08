@@ -2,8 +2,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navigationbar from './components/navbar'
 import ProfilePic from './components/profile';
-import Placeholder from 'react-bootstrap/Placeholder';
-
+import { Document,Page} from 'react-pdf';
+import pdfFile from './components/joshcreaseyresume.pdf'
 
 function App() {
   return (
@@ -29,28 +29,23 @@ function App() {
             and what I value.
           </h3>
         </div>
+        {/* End of first container */}
       </div>
-      <div className="container" style={{ backgroundColor: 'gray', width: '100%', maxWidth: '100%' }}>
-        <h1>Resume
-          <h2>Education<h3>Bachelor's blah blah</h3>
-          </h2>
-          <h2>Experience
-            <h3>Item 1 experience</h3>
-            <h3>Item 2 experience</h3>
-            <h3>Item 3 experience</h3>
-            <h3>Item 4 experience</h3>
-          </h2>
-          <h2>Skills
-            <h3>Here are skills</h3>
-          </h2>
-          <h2>Here is volunteer experience</h2>
-          
-        
-        </h1>
-
+      <div style={{ backgroundColor: 'gray', width: '100%', maxWidth: '100%' }}>
+        <h1 style={{ textAlign: 'center' }}>Resume</h1>
+        <div style={{ textAlign: 'center' }}>
+          <Document file={pdfFile}>
+            <Page pageNumber={1}/>
+          </Document>
+        </div>
+        {/* End of second container */}
       </div>
+      <div style={{ backgroundColor: 'gray', width: '100%', maxWidth: '100%' }}>
+        <h1 style={{textAlign:'center'}}>Video Intro</h1>
 
-
+        {/*End of Video Intro to me container  */}
+      </div>
+    {/* End of MAIN container */}
     </div>
   );
 }
