@@ -2,7 +2,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navigationbar from './components/navbar'
 import ProfilePic from './components/profile';
-import { Document,Page} from 'react-pdf';
+import { Document, Page } from 'react-pdf';
 import pdfFile from './components/joshcreaseyresume.pdf'
 
 function App() {
@@ -35,17 +35,17 @@ function App() {
         <h1 style={{ textAlign: 'center' }}>Resume</h1>
         <div style={{ textAlign: 'center' }}>
           <Document file={pdfFile}>
-            <Page pageNumber={1}/>
+            <Page pageNumber={1} />
           </Document>
         </div>
         {/* End of second container */}
       </div>
       <div style={{ backgroundColor: 'gray', width: '100%', maxWidth: '100%' }}>
-        <h1 style={{textAlign:'center'}}>Video Intro</h1>
+        <h1 style={{ textAlign: 'center' }}>Video Intro</h1>
 
         {/*End of Video Intro to me container  */}
       </div>
-    {/* End of MAIN container */}
+      {/* End of MAIN container */}
     </div>
   );
 }
